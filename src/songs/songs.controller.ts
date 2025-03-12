@@ -31,3 +31,8 @@ export class SongsController {
     return 'Delete a song';
   }
 }
+
+/* NOTE
+Methods in Controller like addOne, findAll, etc. are called Route Handlers.
+If you want to pass the incoming request through some logic before it reaches the route handlers, then you will write that logic in functions called Middlewares.
+*/
