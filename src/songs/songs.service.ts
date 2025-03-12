@@ -15,6 +15,7 @@ export class SongsService {
 
   findAll() {
     // Fetch the songs from the DB
-    return this.songs;
+    throw new Error('Some error during the req-res cycle.');
+    // return this.songs;
   }
 }
