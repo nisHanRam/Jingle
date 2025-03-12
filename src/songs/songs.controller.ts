@@ -1,13 +1,14 @@
-import { Controller, Delete, Get, Post, Put } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Post, Put } from '@nestjs/common';
 import { SongsService } from './songs.service';
+import { CreateSongDTO } from './dto/create-song-dto';
 
 @Controller('songs')
 export class SongsController {
   constructor(private songsService: SongsService) {}
 
   @Post()
-  adddOne() {
-    return this.songsService.create('Breathless by Mahadevan');
+  addOne(@Body() createSongDTO: CreateSongDTO) {
+    return this.songsService.create(createSongDTO);
   }
 
   @Get()
